@@ -982,6 +982,7 @@ bars.forEach((bar, index) => {
 
 setTimeout(createAudioSpectrum, 1000);
 
+
 const addAudioFileUpload = () => {
     const controller = document.querySelector('.audio-controller');
     if (!controller) return;
@@ -1009,23 +1010,25 @@ const addAudioFileUpload = () => {
         const file = event.target.files[0];
         if (!file) return;
 
-        const audioElement = document.getElementById('song');
         const url = URL.createObjectURL(file);
 
-        audioElement.pause();
+        // Remove old audio element if it exists
+        const oldAudio = document.getElementById('song');
+        if (oldAudio) {
+            oldAudio.pause();
+            oldAudio.remove();
+        }
+
+        // Create new audio element
+        const audioElement = document.createElement('audio');
+        audioElement.id = 'song';
         audioElement.src = url;
-        audioElement.load();
+        audioElement.className = 'hide'; // keep hidden
+        audioElement.controls = true;
+        document.body.appendChild(audioElement); // or append to a specific container
 
         if (!audioCtx) {
             audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-        }
-
-        if (audioSrc) {
-            try {
-                audioSrc.disconnect();
-            } catch (err) {
-                console.warn('Error disconnecting audio source:', err);
-            }
         }
 
         try {
