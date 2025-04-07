@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="data:,">
+    <style>
+      body{
+        margin: 0;
+        padding: 0;
+      }
+      canvas{
+        position: absolute;
+      }
+      .overley{
+        position: absolute;
+        z-index: 10;
+        background-color: rgb(100, 100, 100, 0.5);
+        color: white;
+        padding: 5em;
+        border-radius:  25;
+        max-width: fit-content;
+        max-height: fit-content;
+        margin: auto;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        text-align: center;
+      }
+      .overley>*{
+        margin-top: 0.5 em;
+      }
+      .overley:hover{
+        cursor: pointer;
+      }
+      .hide{
+        display: none;
+        visibility: hidden;
+      }
+    </style>
+</head>
+<body>
+    <canvas class="webgl"></canvas>
+    <div class="overley">
+      <h1>Three.js audio visualiser</h1>
+      <h2>enjoy the music</h2>
+      <h3>click here to start</h3>
+    </div>
+    <audio src="./audio/song2.mp3" id="song" class="hide" controls></audio>
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@v0.172.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.172.0/examples/jsm/"
+          }
+        }
+      </script>
+      <script type="module">
+        import GUI from 'https://cdn.jsdelivr.net/npm/lil-gui@0.20/+esm';
+        </script>
+      <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+      <script type="module" src="script.js"></script>
+</body>
+</html>
