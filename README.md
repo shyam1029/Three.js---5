@@ -15,6 +15,12 @@ A unique, real-time 3D audio visualizer built using **Three.js** and **Tone.js**
 - Uses `FFT` (Fast Fourier Transform) to analyze frequency bands in real time.
 - FFT data is mapped to deform the geometry smoothly and rhythmically.
 
+
+### 📁 Audio Upload Support
+- Built-in `<input type="file">` lets users upload their **own MP3 files**.
+- Visualizer updates dynamically to match the uploaded track.
+
+
 ### 💫 Visual Effects
 - Realistic shading with `MeshStandardMaterial` and custom lighting.
 - Dynamic lighting setup including:
