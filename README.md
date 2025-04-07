@@ -20,6 +20,10 @@ A unique, real-time 3D audio visualizer built using **Three.js** and **Tone.js**
 - Built-in `<input type="file">` lets users upload their **own MP3 files**.
 - Visualizer updates dynamically to match the uploaded track.
 
+### 🎛️ Keyboard Shortcuts
+- Press **V** to toggle visualization **modes** (face-only, bars-only, or both).
+- Press **M** to **mute/unmute** the audio.
+- Press **↑ / ↓** to **increase/decrease volume**.
 
 ### 💫 Visual Effects
 - Realistic shading with `MeshStandardMaterial` and custom lighting.
