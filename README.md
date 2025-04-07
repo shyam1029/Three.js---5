@@ -24,6 +24,7 @@ A unique, real-time 3D audio visualizer built using **Three.js** and **Tone.js**
 - Press **V** to toggle visualization **modes** (face-only, bars-only, or both).
 - Press **M** to **mute/unmute** the audio.
 - Press **↑ / ↓** to **increase/decrease volume**.
+- Press **H** to toggle **GUI controls**
 
 ### 💫 Visual Effects
 - Realistic shading with `MeshStandardMaterial` and custom lighting.
